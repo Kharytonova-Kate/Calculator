@@ -4,26 +4,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Calculator {
-	static List<Variables> allVariables; // список, содержащий в себе все
-											// инициализированные пользователем
-											// элементы
+	static List<Variables> allVariables; // пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+											// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+											// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-	public Calculator(String name) throws FileNotFoundException {// в качестве
-																	// аргумента
+	public Calculator(String name) throws FileNotFoundException {// пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 																	// name
-																	// указывается
-																	// имя
-																	// файла,
-																	// который
-																	// необходимо
-																	// считать и
-																	// вычислить
+																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+																	// пїЅпїЅпїЅ
+																	// пїЅпїЅпїЅпїЅпїЅ,
+																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ
+																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		FileReader file = new FileReader(name);
 		Scanner text = new Scanner(file);
-		List<String> scannedText = new ArrayList();// список строк, считаных из
-													// исходного файла.один
-													// элемент списка - одна
-													// строка файла
+		List<String> scannedText = new ArrayList();// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+													// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.пїЅпїЅпїЅпїЅ
+													// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅ
+													// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 		while (text.hasNext()) {
 			String a = text.nextLine();
 
@@ -35,40 +35,40 @@ public class Calculator {
 		
 	}
 
-	public static void calculate(List<String> scannedText) {// в качестве
-															// аргумента
+	public static void calculate(List<String> scannedText) {// пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+															// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 															// scannedText
-															// передается список
-															// строк, считанных
-															// из исходного
-															// файла
+															// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+															// пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+															// пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+															// пїЅпїЅпїЅпїЅпїЅ
 
-		for (int i = 0; i < scannedText.size(); i++) {// цикл перебирает все
-														// элементы списка и
-														// проверяет, содержатся
-														// ли в строках символы
-														// для математических
-														// вычислений и вызывает
-														// соответствующий
-														// символам метод класса
+		for (int i = 0; i < scannedText.size(); i++) {// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+														// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ
+														// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+														// пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+														// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+														// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+														// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+														// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 														// mathActions
 
 			if ((scannedText.get(i)).contains("=")) {
 				mathActions.initialization(scannedText.get(i));
 			} else {
-				if ((scannedText.get(i)).contains("+")) {
+				if ((scannedText.get(i)).contains("/")) {
 					mathActions.addition(scannedText.get(i));
 				} else {
-					if ((scannedText.get(i)).contains("-")) {
+					if ((scannedText.get(i)).contains("*")) {
 						mathActions.subtraction(scannedText.get(i));
 					} else {
-						if ((scannedText.get(i)).contains("/")) {
+						if ((scannedText.get(i)).contains("-")) {
 							mathActions.division(scannedText.get(i));
 						} else {
-							if ((scannedText.get(i)).contains("*")) {
+							if ((scannedText.get(i)).contains("+")) {
 								mathActions.multiplication(scannedText.get(i));
 							} else {
-								System.out.println("объявление переменной");
+								System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 							}
 						}
 					}
