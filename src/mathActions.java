@@ -29,7 +29,7 @@ public class mathActions {
 												// список allVariables
 	}
 
-	public static void addition(String a) {
+	public static String addition(String a) {
 		System.out.print("сложение: ");
 		String key1 = a.substring(0, a.indexOf("+"));// выделяет из исходной
 														// строки субстроку с
@@ -41,7 +41,7 @@ public class mathActions {
 		if (canCalculate) { // проверка на возможность произведения вычислений с
 							// введенной переменной
 		} else {
-			return;// выход из метода в случае, если введенные пользователем
+			return null;// выход из метода в случае, если введенные пользователем
 					// символы не могут быть использованы для вычислений
 		}
 
@@ -55,70 +55,80 @@ public class mathActions {
 													// субстроке метода
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
+double rezult = (value1 + value2);
+String rez = ""+rezult;
 
 		System.out.print(key1 + "+" + key2 + "=");
 		System.out.println(value1 + value2); // вывод результата в консоль
+		return rez;
 	}
 
-	public static void subtraction(String a) {// аналогично сложению
+	public static String subtraction(String a) {// аналогично сложению
 		System.out.print("вычитание: ");
 		String key1 = a.substring(0, a.indexOf("-"));
 		double value1 = Parser.getValueByKey(key1);
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
 
 		String key2 = a.substring((a.indexOf("-") + 1));
 		double value2 = Parser.getValueByKey(key2);
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
-
+		double rezult = (value1 - value2);
+		String rez = ""+rezult;
+		
 		System.out.print(key1 + "-" + key2 + "=");
 		System.out.println(value1 - value2);
+		return rez;
 	}
 
-	public static void multiplication(String a) {// аналогично сложению
+	public static String multiplication(String a) {// аналогично сложению
 		System.out.print("умножение: ");
 		String key1 = a.substring(0, a.indexOf("*"));
 		double value1 = Parser.getValueByKey(key1);
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
 
 		String key2 = a.substring((a.indexOf("*") + 1));
 		double value2 = Parser.getValueByKey(key2);
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
-
+		double rezult = (value1 * value2);
+		String rez = ""+rezult;
 		System.out.print(key1 + "*" + key2 + "=");
 		System.out.println(value1 * value2);
+		return rez;
 	}
 
-	public static void division(String a) {// аналогично сложению
+	public static String division(String a) {// аналогично сложению
 		System.out.print("деление: ");
 		String key1 = a.substring(0, a.indexOf("/"));
 		double value1 = Parser.getValueByKey(key1);
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
 
 		String key2 = a.substring((a.indexOf("/") + 1));
 		double value2 = Parser.getValueByKey(key2);
 		if (canCalculate) {
 		} else {
-			return;
+			return null;
 		}
-
+		double rezult = (value1 / value2);
+		String rez = ""+rezult;
 		System.out.print(key1 + "/" + key2 + "=");
 		System.out.println(value1 / value2);
+		return rez;
 	}
 }
